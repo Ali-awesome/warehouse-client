@@ -11,14 +11,14 @@ const HeroSection = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img src='https://i.postimg.cc/MHr3ypFc/hero-1.jpg' className="d-block w-100" alt="..." />
-                        <div class="carousel-caption d-none d-md-block mb-5">
+                        <div className="carousel-caption d-none d-md-block mb-5">
                             <h5 className='fs-1'>Get your dream and LIVE it.</h5>
                             <p className='fs-3'>Stay with us to get the best and let us take you to the best.</p>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src='https://i.postimg.cc/SsSg3902/hero-2.jpg' className="d-block w-100" alt="..." />
-                        <div class="carousel-caption d-none d-md-block mb-5">
+                        <div className="carousel-caption d-none d-md-block mb-5">
                             <h5 className='fs-1'>Get your dream and LIVE it.</h5>
                             <p className='fs-3'>Stay with us to get the best and let us take you to the best.</p>
                         </div>

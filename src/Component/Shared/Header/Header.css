@@ -1,0 +1,14 @@
+.banner {
+    border-bottom: 1px solid #37cfa2;
+    height: 70px;
+
+}
+
+.container .warehouse {
+    color: #37cfa2;
+    font-weight: 600;
+    font-size: large;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}

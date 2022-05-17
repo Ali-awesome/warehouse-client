@@ -1,0 +1,40 @@
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.site-section {
+    background-color: #37cfa2;
+    padding: 2.5em 0;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .site-section {
+        padding: 5em 0;
+    }
+}
+
+.site-section.site-section-sm {
+    padding: 4em 0;
+}
+
+.section-title {
+    color: #37cfa2;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+@media (max-width: 991.98px) {
+    .section-title {
+        font-size: 30px;
+    }
+}
+
+.site-section .submit-button {
+    background-color: #37cfa2;
+}
