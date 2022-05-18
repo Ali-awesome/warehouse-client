@@ -5,8 +5,8 @@ const Property = ({ property }) => {
     const { name, url, description, price, supplier, id } = property;
     const navigate = useNavigate();
 
-    const navigateToDetails = id => {
-        navigate(`/service/${id}`)
+    const navigateToDetails = (id) => {
+        navigate(`/inventory/${id}`)
     };
     return (
         <div className='col'>
