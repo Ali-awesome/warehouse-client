@@ -36,7 +36,7 @@ const Header = () => {
 
                                     <Dropdown.Menu>
                                         <Dropdown.Item className='warehouse' as={Link} to={'/my-items'}>My Items</Dropdown.Item>
-                                        <Dropdown.Item className='warehouse' as={Link} to={'/manage-items'}>Manage Inventory</Dropdown.Item>
+                                        <Dropdown.Item className='warehouse' as={Link} to={'/all-items'}>Manage Inventory</Dropdown.Item>
                                         <Dropdown.Item className='warehouse' as={Link} to={'/add-items'}>Add Items</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>

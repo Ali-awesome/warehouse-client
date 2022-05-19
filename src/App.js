@@ -2,9 +2,11 @@
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import './App.css';
+import AddItem from './Component/AddItem/AddItem';
 import Blog from './Component/Blog/Blog';
 import Home from './Component/Home/Home';
 import ManageAllItems from './Component/ManageAllItems/ManageAllItems';
+import MyItem from './Component/MyItem/MyItem';
 import NotFound from './Component/NotFound/NotFound';
 import Footer from './Component/Shared/Footer/Footer';
 import Header from './Component/Shared/Header/Header';
@@ -31,6 +33,16 @@ function App() {
         <Route path='/all-items' element={
           <RequireAuth>
             <ManageAllItems></ManageAllItems>
+          </RequireAuth>
+        }></Route>
+        <Route path='/my-items' element={
+          <RequireAuth>
+            <MyItem></MyItem>
+          </RequireAuth>
+        }></Route>
+        <Route path='/add-items' element={
+          <RequireAuth>
+            <AddItem></AddItem>
           </RequireAuth>
         }></Route>
         <Route path="/register" element={<Register></Register>}></Route>
