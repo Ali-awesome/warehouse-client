@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useItems from '../../Hooks/useItems';
 import Property from '../Property/Property';
+import Loading from '../../Shared/Loading/Loading';
 
 const Properties = () => {
     const [items, setItems] = useItems();
@@ -9,12 +10,15 @@ const Properties = () => {
             <div id='properties'>
                 <h1 className='text-center text-secondary my-5'>Furnitures</h1>
                 <div className="properties-container row row-cols-1 row-cols-md-3 g-4">
+
+
                     {
-                        items.slice(0, 6).map(item => <Property
-                            key={item._id}
-                            property={item}
-                        >
-                        </Property>)
+                        items.length === 0 ? <Loading></Loading>
+                            : items.slice(0, 6).map(item => <Property
+                                key={item._id}
+                                property={item}
+                            >
+                            </Property>)
                     }
                 </div>
             </div>
