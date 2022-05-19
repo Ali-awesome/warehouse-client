@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Blog from './Component/Blog/Blog';
 import Home from './Component/Home/Home';
+import ManageAllItems from './Component/ManageAllItems/ManageAllItems';
 import NotFound from './Component/NotFound/NotFound';
 import Footer from './Component/Shared/Footer/Footer';
 import Header from './Component/Shared/Header/Header';
@@ -25,6 +26,11 @@ function App() {
         <Route path='/inventory/:itemId' element={
           <RequireAuth>
             <Update></Update>
+          </RequireAuth>
+        }></Route>
+        <Route path='/all-items' element={
+          <RequireAuth>
+            <ManageAllItems></ManageAllItems>
           </RequireAuth>
         }></Route>
         <Route path="/register" element={<Register></Register>}></Route>

@@ -9,7 +9,7 @@ const RequireAuth = ({ children }) => {
     const [user, loading] = useAuthState(auth);
     const location = useLocation();
     const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);
-    if (loading) {
+    if (loading || sending) {
         return <Loading></Loading>
     }
 
@@ -25,15 +25,14 @@ const RequireAuth = ({ children }) => {
                 className='btn btn-primary'
                 onClick={async () => {
                     await sendEmailVerification();
-                    toast('Sent email');
+                    toast('Email verification sent!');
                 }}
             >
-                Send Verification Email Again
+                Send Verification Email Again!
             </button>
             <ToastContainer></ToastContainer>
         </div>
     }
-
     return children;
 };
 

@@ -6,6 +6,7 @@ import Loading from '../../Shared/Loading/Loading';
 // import SocialLogin from '../SocialLogin/SocialLogin';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import GoogleAuth from '../GoogleAuth/GoogleAuth';
 
 
 const Login = () => {
@@ -71,9 +72,9 @@ const Login = () => {
 
                 <form className='my-3' onSubmit={handleSubmit}>
 
-                    <input className='mb-3 w-100 border rounded' type="email" name="email" id="" placeholder='Enter Your Email Address' required />
+                    <input className='mb-3 w-100 border rounded' type="email" name="email" placeholder='Enter Your Email Address' required />
 
-                    <input className='mb-3 w-100 border rounded' type="password" name="password" id="" placeholder='Enter Your Password' required />
+                    <input className='mb-3 w-100 border rounded' type="password" name="password" placeholder='Enter Your Password' required />
                     <input
                         className='warehouse border border-warning w-50 mx-auto d-block mb-2'
                         type="submit"
@@ -84,7 +85,7 @@ const Login = () => {
             </div>
 
 
-            {/* <SocialLogin></SocialLogin> */}
+            <GoogleAuth></GoogleAuth>
 
         </div>
     );

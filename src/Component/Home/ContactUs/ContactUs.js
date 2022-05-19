@@ -13,7 +13,7 @@ const ContactUs = () => {
                 <div className="container">
                     <div className="row mb-5">
                         <div className="col-12">
-                            <h2 className="section-title mb-3">Contct Us</h2>
+                            <h2 className="section-title text-secondary mb-3">Contct Us</h2>
                         </div>
                     </div>
                     <div className="row text-start">

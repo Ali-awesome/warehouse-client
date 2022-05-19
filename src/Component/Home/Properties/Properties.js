@@ -1,27 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import useItems from '../../Hooks/useItems';
 import Property from '../Property/Property';
 
 const Properties = () => {
-    const [services, setServices] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/items')
-            .then(res => res.json())
-            .then(data => setServices(data));
-    }, [])
+    const [items, setItems] = useItems();
     return (
         <div className='container'>
             <div id='properties'>
-                <h1 className='text-center text-secondary my-5'>Avenues</h1>
+                <h1 className='text-center text-secondary my-5'>Furnitures</h1>
                 <div className="properties-container row row-cols-1 row-cols-md-3 g-4">
                     {
-                        services.slice(0, 6).map(service => <Property
-                            key={service.id}
-                            property={service}
+                        items.slice(0, 6).map(item => <Property
+                            key={item._id}
+                            property={item}
                         >
                         </Property>)
                     }
                 </div>
+            </div>
+            <div className='d-flex justify-content-center'>
+                <button className='btn btn-dark text-center my-3'><Link className='text-decoration-none text-white ' to={'/all-items'} >Manage Inventory</Link></button>
             </div>
         </div>
     );

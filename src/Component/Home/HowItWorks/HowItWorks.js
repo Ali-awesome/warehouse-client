@@ -17,8 +17,8 @@ const HowItWorks = () => {
                             <div className="pr-5 first-step">
                                 <span className="text-black">01.</span>
                                 <span className="custom-icon flaticon-house text-black"></span>
-                                <h3 className="text-black">Find Property.</h3>
-                                <p className="text-black">what suits you the best.</p>
+                                <h3 className="text-black">Find best furniture set.</h3>
+                                <p className="text-black">What suits you the best!</p>
                             </div>
                         </div>
 
@@ -26,7 +26,7 @@ const HowItWorks = () => {
                             <div className="pr-5 second-step">
                                 <span className="text-black">02.</span>
                                 <span className="custom-icon flaticon-coin text-black"></span>
-                                <h3 className="text-dark">Buy Property.</h3>
+                                <h3 className="text-dark">Buy It.</h3>
                                 <p className="text-black">Within your budget and worthy of it.</p>
                             </div>
                         </div>
@@ -35,8 +35,8 @@ const HowItWorks = () => {
                             <div className="pr-5">
                                 <span className="text-black">03.</span>
                                 <span className="custom-icon flaticon-home text-black"></span>
-                                <h3 className="text-dark">Outstanding Houses.</h3>
-                                <p className="text-black">Home sweet home.</p>
+                                <h3 className="text-dark">Make Outstanding Home.</h3>
+                                <p className="text-black">Home sweet Home.</p>
                             </div>
                         </div>
                     </div>
