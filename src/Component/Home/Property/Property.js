@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Property.css'
 
 const Property = ({ property }) => {
-    const { name, url, description, price, supplier, _id } = property;
+    const { name, url, description, price, quantity, supplier, _id } = property;
     const navigate = useNavigate();
 
     const navigateToDetails = (_id) => {
@@ -16,6 +16,7 @@ const Property = ({ property }) => {
                     <img src={url} className="image card-img-top" alt="..."></img>
                     <h5 className="card-title">Name: {name}</h5>
                     <p className='m-0'><b>Price:</b> {price}</p>
+                    <p className='m-0'><b>Quantity:</b> {quantity}</p>
                     <p className="m-0"><small>{description}</small></p>
                     <p><b>Supplier:</b> {supplier}</p>
                     <div>
