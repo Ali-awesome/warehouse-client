@@ -38,7 +38,7 @@ const MyItem = () => {
     const handleDelete = id => {
         const confirmation = window.confirm('Are you sure?');
         if (confirmation) {
-            const url = `http://localhost:5000/myItems/${id}`;
+            const url = `http://localhost:5000/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -64,7 +64,7 @@ const MyItem = () => {
                                 <img src={item.url} className="image card-img-top" alt="..."></img>
                                 <h5 className="card-title">Name: {item.name}</h5>
                                 <p className='m-0'><b>Price:</b> {item.price}</p>
-                                <p className="m-0"><small>{item.MyItemdescription}</small></p>
+                                <p className="m-0"><small>{item.description}</small></p>
                                 <div>
                                     <button onClick={() => handleDelete(item._id)} className='mb-2 btn btn-dark'>Delete This Item</button>
                                 </div>

@@ -10,7 +10,7 @@ const AddItem = () => {
     const handleAddItem = (event) => {
         event.preventDefault();
         const item = {
-            email: user?.email,
+            supplierEmail: user?.email,
             name: event.target.itemName.value,
             price: event.target.price.value,
             description: event.target.description.value,
@@ -35,7 +35,7 @@ const AddItem = () => {
 
     }
     return (
-        <div className='addForm'>
+        <div className='addForm mb-5'>
             <h2>Add a new item in Inventory.</h2>
             <form onSubmit={handleAddItem}>
                 <input type="text" name="itemName" id="" placeholder='Item Name' required />
