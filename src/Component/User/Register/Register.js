@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import { toast } from 'react-toastify';
 import GoogleAuth from '../GoogleAuth/GoogleAuth';
+import useJWT from '../../Hooks/useJWT';
 
 const Register = () => {
     const [agree, setAgree] = useState(false);
@@ -18,6 +19,8 @@ const Register = () => {
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
+
+    const [token] = useJWT(user);
     const navigate = useNavigate();
 
     const navigateToLogin = () => {
@@ -28,8 +31,8 @@ const Register = () => {
         return <Loading></Loading>
     }
 
-    if (user) {
-        console.log('user', user);
+    if (token) {
+        navigate('/home');
     }
 
     const handleRegister = async (event) => {
@@ -43,8 +46,7 @@ const Register = () => {
         if (password === confirm) {
             await createUserWithEmailAndPassword(email, password);
             await updateProfile({ displayName: name });
-            console.log('Profile updated!');
-            navigate('/home');
+            // navigate('/home');
             event.target.reset();
         }
         else {

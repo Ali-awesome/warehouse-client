@@ -2,10 +2,13 @@ import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import useJWT from '../../Hooks/useJWT';
 import Loading from '../../Shared/Loading/Loading';
 
 const GoogleAuth = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+    const [token] = useJWT(user);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -21,7 +24,7 @@ const GoogleAuth = () => {
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
     return (

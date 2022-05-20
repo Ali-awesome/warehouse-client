@@ -6,6 +6,7 @@ import Loading from '../../Shared/Loading/Loading';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import GoogleAuth from '../GoogleAuth/GoogleAuth';
+import useJWT from '../../Hooks/useJWT';
 
 
 const Login = () => {
@@ -22,15 +23,16 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [token] = useJWT(user);
 
     if (loading || sending) {
         return <Loading></Loading>
     }
-
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
         toast('Congratulations! Succcessfully logged in!')
     }
+
 
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
